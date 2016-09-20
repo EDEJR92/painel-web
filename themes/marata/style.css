@@ -1,0 +1,209 @@
+/** 
+ * Default layout - Painel Web
+ * @author Rogerio Lino <rogeriolino@gmail.com>
+ */
+#layout, #layout * {
+    padding: 0;
+    margin: 0px;
+    line-height: 1;
+}
+
+/* 
+ * Senha Atual - Ultima senha chamada
+ */
+#mensagem {
+    padding-bottom: 55px;
+    padding-left: 20px;
+}
+
+#mensagem span {
+    padding: 0px;
+    display: inline-block;
+}
+
+#senha {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* local */
+
+#local {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+#local-numero {    
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*
+ * Ultimas senhas chamadas
+ */
+#historico {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+#historico .senhas {
+    margin-top:  10px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+	height: 11vw;
+}
+
+#historico .senhas div.senha-chamada {
+    text-align: center;
+    display: inline-block;
+}
+
+#historico .senhas div.senha-chamada div.senha { 
+    font-weight: bold; 
+    text-align: center; 
+}
+
+#historico .senhas div.senha-chamada div.local {
+    text-align: center;
+}
+
+
+/* cores - atendimento normal */
+#layout.normal { background-color: #004D40; }
+#layout.normal #mensagem span { color: #fff; }
+#layout.normal #senha span { color: white; }
+#layout.normal #cliente span { color: white; }
+#layout.normal #local span { color: #fff; }
+#layout.normal #local-numero span { color: #fff; }
+#layout.normal #historico .senhas { background: rgba(0, 0, 0, .4); }
+#layout.normal #historico .senhas * { color: #fff; }
+
+/* cores - atendimento prioritario */
+#layout.prioridade { background-color: #004D40; }
+#layout.prioridade #mensagem span { color: #fff; }
+#layout.prioridade #senha span { color: white; }
+#layout.prioridade #cliente span { color: white; }
+#layout.prioridade #local span { color: #fff; }
+#layout.prioridade #local-numero span { color: #fff; }
+#layout.prioridade #historico .senhas { background: rgba(0, 0, 0, .4); }
+#layout.prioridade #historico .senhas * { color: #fff; }
+
+/* cores - atendimento prioritario quando no historico */
+/*#historico .senhas .prioridade * { color: white !important; }*/
+
+/* fonts */
+
+#mensagem span {
+    font-size: 7vw;
+}
+
+span.ng-binding {}
+
+#senha span {
+    font-size: 18vw;
+}
+
+#cliente span {
+    font-size: 6vw;
+    padding-left: 3vw;
+	white-space: nowrap 
+}
+
+
+#local span {
+    font-size: 8vw;
+}
+
+#local-numero span {
+    font-size: 14em;
+}
+
+.senha-chamada .senha span {
+    font-size: 6vw;
+}
+
+.senha-chamada .local span {
+    font-size: 3vw;
+}
+
+.container-datahora {
+    position: absolute;
+    right: 0vw;
+    top: 0vw;
+    padding: 10px;
+    width: 45%;
+    height: 100%;
+    border-left: 8vh solid transparent;
+    border-top: 14vh solid #FFEE00;
+    display: inline-block;
+	font-size: 3vh;
+}
+.clock {
+    position: fixed;
+    top: -1vh;
+}
+.clock ul.time {
+    float: left;
+    clear: both;
+    margin: 10px 0 0 0;
+    padding:0px;
+    list-style:none;
+    text-align:center;
+}
+.clock ul.time li {
+    display:inline;
+    color: #004D40;
+    font-size: 5em;
+    text-align: center;
+}
+.container-date {
+    position: fixed;
+    top: 1vh;
+    right: -1vh;
+    width: 20%;
+}
+.container-date #day {
+    font-weight: bold;
+    color: #004D40;
+    text-transform: uppercase;
+    font-size: 2vw;
+    text-align:center;
+}
+.container-date #date {
+    padding: 20px 0 0 5px;
+    font-weight: bold;
+    color: #004D40;
+    text-transform: uppercase;
+    font-size: 2vw;
+    text-align:center;
+}
+.container-date #date span {
+    font-weight: normal; 
+}
+
+#point { 
+    position:relative; 
+    -moz-animation:animatePoint 1s ease infinite; 
+    -webkit-animation:animatePoint 1s ease infinite; 
+    padding: 0; 
+}
+
+@-webkit-keyframes animatePoint {
+    0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+    50% {opacity:0; text-shadow:none; }
+    100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }  
+}
+@-moz-keyframes animatePoint {
+    0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+    50% {opacity:0; text-shadow:none; }
+    100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }  
+}
+#logo_marata{
+    width: 25vh;
+    margin-left: -1vh;
+    margin-top: -7vh;
+}

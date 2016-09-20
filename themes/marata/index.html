@@ -1,0 +1,54 @@
+﻿        
+<div id="layout-content">
+    <div id="senha-container">
+        <div id="mensagem">
+            <img id="logo_marata" src="themes/marata/logo-marata.png" />  
+            <span>{{ ultima.unidade }}</span>
+            <div class="container-datahora">
+            <div class="clock">
+              <ul class="time">
+                  <li id="hours"></li>
+                  <li id="point">:</li>
+                  <li id="min"></li>
+              </ul>
+            </div>
+            <div class="container-date">
+                <div id="date"></div>
+                <div id="day"></div>   
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div id="senha" class="blink">
+                    <span>{{ ultima.texto }}</span>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="local" class="local">
+                    <span>{{ ultima.local }}</span>
+                </div>
+                <div id="local-numero" class="numero-local">
+                    <span>{{ ultima.numeroLocal|pad:2 }}</span>
+                </div>
+            </div>
+        </div>	
+    </div>
+    <div id="historico">
+	    <div class="row">
+		<div id="cliente" class="blink">
+	            <span>{{ ultima.nomeCliente }}</span>
+                </div>
+            </div>
+        <div class="senhas">
+            <div class="col-sm-3 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
+                <div class="senha">
+                    <span>{{ senha.texto }}</span>
+                </div>
+                <div class="local">
+                    <span>{{ senha.local }}: {{ senha.numeroLocal| pad:2 }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

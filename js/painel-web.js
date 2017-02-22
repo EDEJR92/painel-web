@@ -8,11 +8,12 @@ angular.module('app', [])
         "use strict";
         
         $scope.ultima = {
-            texto: 'A000',
+            texto: 'M000',
             local: 'Guichê',
             numeroLocal: 0,
             mensagem: 'Atendimento',
-            styleClass: 'inactive'
+            unidade: 'Unidade',
+            styleClass: 'normal'
         };
         
 		$scope.defaultLang = 'pt-BR';

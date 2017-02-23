@@ -115,7 +115,7 @@ angular.module('app', [])
                 }
                 PainelWeb.blink($('.blink'));
                 // evita adicionar ao historico senha rechamada
-                if ($scope.ultima.texto !== 'A000' && $scope.ultima.texto !== senha.texto) {
+                if ($scope.ultima.texto !== 'M000' && $scope.ultima.texto !== senha.texto) {
                     // removendo duplicada
                     $scope.historico.remove($scope.ultima);
                     // guardando a senha anterior
